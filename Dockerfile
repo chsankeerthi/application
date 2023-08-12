@@ -11,7 +11,7 @@ RUN  mkdir /opt/tomcat
 # Download the SQL script
 #RUN wget -O /home/ubuntu/scripts/MasterScripts.sql https://ovaledge.s3.us-west-1.amazonaws.com/OvalEdge+Clients/Celebal/MasterScripts.sql
 RUN apt-get update && apt-get install -y openjdk-8-jdk
-RUN wget -O /home/ubuntu/scripts/MasterScripts.sql https://ovaledge.s3.us-west-1.amazonaws.com/OvalEdge+Clients/Celebal/MasterScripts.sqlRu
+RUN wget -O /home/ubuntu/scripts/MasterScripts.sql https://ovaledge.s3.us-west-1.amazonaws.com/OvalEdge+Clients/Celebal/MasterScripts.sql
 RUN apt-get update
 RUN apt install mysql-server -y
 #RUN service mysql start
