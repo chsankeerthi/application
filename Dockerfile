@@ -19,7 +19,7 @@ RUN apt install mysql-server -y
 # MySQL credentials
 RUN export MYSQL_PASS="OvalEdge!"
 #RUN wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
-RUN wget -O /home/ubuntu/scripts/apache-tomcat-9.0.78.tar.gz/webapps/ovaledge.war https://ovaledge.s3.us-west-1.amazonaws.com/Release+Builds/Release6.0.2/Release6.0.2.21/tag-v6.0.2.21-GA-20230627/OvalEdge+Standard+Package/ovaledge.war
+RUN wget -O /home/ubuntu/scripts/apache-tomcat-9.0.78/webapps/ovaledge.war https://ovaledge.s3.us-west-1.amazonaws.com/Release+Builds/Release6.0.2/Release6.0.2.21/tag-v6.0.2.21-GA-20230627/OvalEdge+Standard+Package/ovaledge.war
 
 #RUN tar -zvxf /home/ubuntu/scripts/apache-tomcat-9.0.78.tar.gz  -C /home/ubuntu/scriptsRUN wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
 #RUN wget https://jenkins-ovaledge-s3.s3.amazonaws.com/Internal_Release6.x_OE_STANDARD/458/ovaledge.war -O /home/ubuntu/scripts/apache-tomcat-9.0.78.tar.gz/webapps/ovaledge.war
