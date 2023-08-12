@@ -21,11 +21,11 @@ RUN export MYSQL_PASS="OvalEdge!"
 #RUN wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
 
 #RUN tar -zvxf /home/ubuntu/scripts/apache-tomcat-9.0.78.tar.gz  -C /home/ubuntu/scriptsRUN wget  https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
-#RUN wget https://jenkins-ovaledge-s3.s3.amazonaws.com/Internal_Release6.x_OE_STANDARD/458/ovaledge.war -O /home/ubuntu/scripts/apache-tomcat-9.0.78.tar.gz/webapps/ovaledge.war
+RUN wget https://jenkins-ovaledge-s3.s3.amazonaws.com/Internal_Release6.x_OE_STANDARD/458/ovaledge.war -O /home/ubuntu/scripts/apache-tomcat-9.0.78.tar.gz/webapps/ovaledge.war
 RUN wget -O /home/ubuntu/apache-tomcat-9.0.78.tar.gz https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.78/bin/apache-tomcat-9.0.78.tar.gz
 RUN tar -zxvf /home/ubuntu/apache-tomcat-9.0.78.tar.gz -C /home/ubuntu/
 #COPY ovaledge.war /home/ubuntu/
-COPY ovaledge.war /home/ubuntu/apache-tomcat-9.0.78/webapps/ovaledge.war
+#COPY ovaledge.war /home/ubuntu/apache-tomcat-9.0.78/webapps/ovaledge.war
 COPY oasis.properties /home/ext.properties/
 #RUN chmod +x /opt/tomcat/bin/startup.sh
 COPY run.sh /home/ubuntu/scripts/run.sh
