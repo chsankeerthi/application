@@ -1,6 +1,11 @@
 #!/bin/bash
 
 MYSQL_PASS="OvalEdge!"
+# Create a file /etc/systemd/system/docker.service.d/override.conf
+[Service]
+ExecStart=
+ExecStart=/usr/bin/dockerd -H fd:// --group=docker
+
 
 # Execute the SQL query using the mysql command-line client
 service mysql start
