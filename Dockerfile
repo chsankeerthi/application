@@ -1,5 +1,4 @@
 FROM ubuntu:latest
-RUN usermod -aG docker agentuser
 RUN apt-get update
 RUN apt install wget -y
 RUN  mkdir -p /home/ubuntu/scripts/
