@@ -29,7 +29,7 @@ RUN tar -zxvf /home/ubuntu/apache-tomcat-9.0.78.tar.gz -C /home/ubuntu/
 COPY /home/ubuntu/myagent/scripts/oasis.properties /home/ext.properties/
 #RUN chmod +x /opt/tomcat/bin/startup.sh
 COPY /home/ubuntu/myagent/scripts/run.sh /home/ubuntu/scripts/run.sh
-COPY /home/ubuntu/myagent/scriptsMasterScripts.sql /home/ubuntu/scripts/MasterScripts.sql
+COPY /home/ubuntu/myagent/scripts/MasterScripts.sql /home/ubuntu/scripts/MasterScripts.sql
 RUN chmod +x  /home/ubuntu/scripts/run.sh
 RUN chmod 777 -R  /home/ubuntu/apache-tomcat-9.0.78
 EXPOSE 8080
