@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: application
-        image: ovaledge000/application:$(Build.BuildId)
+        image: ovaledge000/application
         ports: 
         - containerPort: 8080
 --- 
