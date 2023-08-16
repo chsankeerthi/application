@@ -14,7 +14,7 @@ spec:
     spec: 
       containers: 
       - name: application
-        image: ovaledge000/application
+        image: ovaledge000/application:latest
         ports: 
         - containerPort: 8080
 --- 
