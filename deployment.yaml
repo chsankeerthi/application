@@ -1,38 +1,33 @@
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: ovaledge
-  labels:
-    app: my-app-1
-spec:
-  selector:
+apiVersion: apps/v1 # for versions before 1.9.0 use apps/v1beta2 
+kind: Deployment 
+metadata: 
+  name: k8s-deployment 
+spec: 
+  selector: 
     matchLabels: 
-      app: my-app
-  replicas: 2
-  strategy:
-    type: RollingUpdate
+      app: application 
+  replicas: 3 # tells deployment to run 2 pods matching the template 
   template:
-    metadata:
-      labels:
-        app: my-app
-    spec:
-      containers:
-       —name: ovaledge000
-          image: ovaledge000/oeimage:latest
-          ports:
-           —containerPort: 8080
-
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: my-app-svc
-spec:
-  selector:
-    app: my-app
-  ports:
-    - protocol: TCP
-      port: 8000
-      targetPort: 8000
-  type: LoadBalancer
+    metadata: 
+      labels: 
+        app: application
+    spec: 
+      containers: 
+      - name: application
+        image: ovaledge000/application:$(Build.BuildId)
+        ports: 
+        - containerPort: 8080
+--- 
+# https://kubernetes.io/docs/concepts/services-networking/service/#defining-a-service  
+kind: Service 
+apiVersion: v1 
+metadata: 
+  name: application-service 
+spec: 
+  selector: 
+    app: application
+  ports: 
+  - protocol: TCP 
+    port: 8080
+    targetPort: 8080
+  type: LoadBalancer 
