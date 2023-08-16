@@ -18,6 +18,6 @@ spec:
     spec:
       containers:
        —name: ovaledge1
-          image: ovaledge000/oeimage
+          image: ovaledge000/oeimage:latest
           ports:
            —containerPort: 8080
